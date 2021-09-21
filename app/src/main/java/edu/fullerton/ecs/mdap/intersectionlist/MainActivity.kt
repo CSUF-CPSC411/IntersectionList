@@ -53,7 +53,8 @@ class MainActivity : AppCompatActivity() {
                 Toast.LENGTH_SHORT
             )
             toast.show()
-            /* READ ONLY WHEN WORKING ON MODEL 2
+            /** READ ONLY WHEN WORKING ON MODEL 2 **/
+            /*
             // We can access the data through the dataset property inside intersectionListAdapter.the d
             intersectionListAdapter.dataset.add("${binding.intersectionName.text} @ ${binding.intersectionAddress.text}")
 
