@@ -22,10 +22,12 @@ class MainActivity : AppCompatActivity() {
          * is an object used for performing inflation.
          */
         var binding = ActivityMainBinding.inflate(layoutInflater)
-        // root is a property holding the view of the inflated XML
+        // root is a property holding the view of the inflated XML and is set as the contentView
         setContentView(binding.root)
 
-        /** We create an intersectionListAdapter that provides the methods required by a
+        /**
+         * READ ONLY WHEN WORKING ON MODEL 2:
+         * We create an intersectionListAdapter that provides the methods required by a
          * RecylerView object. We assign it to the adapter property so that the recyclerView can
          * call our implementation of the methods inside intersectionListAdapter.
          */
@@ -34,7 +36,8 @@ class MainActivity : AppCompatActivity() {
         binding.recyclerView.adapter = intersectionListAdapter
         */
 
-        /** Elements of the XML can be accessed through the binder by using the dot notation
+        /**
+         * Elements of the XML can be accessed through the binding by using the dot notation
          * followed by the id of the element. In this case, addIntersection is a Button inside
          * activity_main.xml. We use the element's setOnClickListener to define its reaction to
          * click events.
@@ -46,11 +49,11 @@ class MainActivity : AppCompatActivity() {
              */
             val toast = Toast.makeText(
                 this,
-                "Adding ${binding.intersectionName.text} @ ${binding.intersectionAddress.text}",
+                "Adding ${binding.intersectionName.text}",
                 Toast.LENGTH_SHORT
             )
             toast.show()
-            /*
+            /* READ ONLY WHEN WORKING ON MODEL 2
             // We can access the data through the dataset property inside intersectionListAdapter.the d
             intersectionListAdapter.dataset.add("${binding.intersectionName.text} @ ${binding.intersectionAddress.text}")
 
