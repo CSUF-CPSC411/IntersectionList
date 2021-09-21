@@ -10,11 +10,11 @@ import edu.fullerton.ecs.mdap.intersectionlist.R
 
 /** We create a class that implements the methods required by the RecylerView. The first parameter
  * is the [context], which in this case is the MainActivity object. This gives the class access to
- * necessary properties and methods. It also accepts the [dataset] that is accessible as a property
+ * necessary properties and methods. It also accepts a [dataset] that is accessible as a property
  * of the class. It inherits from RecyclerView.Adapter that requires implementations for the
- * onCreateViewHolder, onBindViewHolder, and getItemCount methods. We set the parameter type or
- * generics type to IntersectionListAdapter.ItemViewHolder, which is the name of the class that
- * holds data about each element in the RecyclerView.
+ * onCreateViewHolder, onBindViewHolder, and getItemCount methods. We set the type parameter to
+ * IntersectionListAdapter.ItemViewHolder, which is the name of the class that holds data about
+ * each element in the RecyclerView.
  */
 class IntersectionListAdapter(
     private val context: Context,
@@ -27,7 +27,7 @@ class IntersectionListAdapter(
      * RecyclerView.ViewHolder so it can be used by the RecyclerView.
      */
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
-        // We create references to elements in the list_item.xml so we can modify them.
+        // We create references to elements in list_item.xml so we can modify them.
         val intersectionItemName: TextView = view.findViewById(R.id.intersectionItemName)
         val position: TextView = view.findViewById(R.id.position)
     }
@@ -44,7 +44,7 @@ class IntersectionListAdapter(
         val adapterLayout = LayoutInflater.from(parent.context)
             .inflate(R.layout.list_item, parent, false)
 
-        // We create an ItemViewHolder object using the layout we inflated.
+        // We create and return an ItemViewHolder object using the layout we inflated.
         return ItemViewHolder(adapterLayout)
     }
 
