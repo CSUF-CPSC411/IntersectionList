@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
             toast.show()
             /** READ ONLY WHEN WORKING ON MODEL 2 **/
             /*
-            // We can access the data through the dataset property inside intersectionListAdapter.the d
+            // We can access the data through the dataset property inside intersectionListAdapter.
             intersectionListAdapter.dataset.add("${binding.intersectionName.text} @ ${binding.intersectionAddress.text}")
 
             // Inform the adapter that we made changes so the visual representation can be updated.
